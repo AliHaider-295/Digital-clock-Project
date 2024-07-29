@@ -7,7 +7,7 @@
 
 .hero {
   width: 100%;
-  min-height: 100vh; /* Changed to 100vh for a more common full-screen approach */
+  min-height: 100vh;
   background: linear-gradient(45deg, #08001f, #30197d);
   color: #fff;
   position: relative;
@@ -30,14 +30,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 48px; /* Added to increase the size of the clock text */
+  font-size: 48px;
 }
 
 .container::before {
   content: "";
   width: 180px;
-  height: 180px; /* Added height for proper square shape */
-  background: #f41b75;
+  height: 180px;
   border-radius: 5px;
   position: absolute;
   top: -50%;
@@ -48,14 +47,14 @@
 .container::after {
   content: "";
   width: 180px;
-  height: 180px; /* Added height for proper square shape */
-  background: #419aff;
+  height: 180px;
   border-radius: 50%;
   position: absolute;
   right: -25px;
   bottom: -60px;
   z-index: -1;
 }
+
 .clock span {
   font-size: 80px;
   width: 110px;
@@ -63,21 +62,30 @@
   text-align: center;
   position: relative;
 }
-.clock span ::after {
+
+#hrs::after {
   content: "HOURS";
-  position: absolute;
   font-size: 16px;
+  position: absolute;
   bottom: -5px;
   left: 50%;
   transform: translateX(-50%);
 }
-#hrs::after {
-  content: "HOURS";
-}
+
 #min::after {
   content: "MINS";
+  font-size: 16px;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 #sec::after {
   content: "SEC";
+  font-size: 16px;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
 }
